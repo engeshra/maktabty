@@ -1,5 +1,5 @@
 <%= form_for(@book) do |f| %>
-<h3><%= @book.errors.any? %></h3>
+<h3>Edit Book</h3>
   <% if @book.errors.any? %>
     <div id="error_explanation">
       <div class="alert alert-error">
@@ -14,7 +14,7 @@
   <% end %>
   <div class="field">
     <%= f.label :title %>
-    <%= f.text_area :title %>
+    <%= f.text_field :title %>
     <%= f.label :description %>
     <%= f.text_area :description %>
     <h3>Book state  : <%= @book.state %> <h3><br>
