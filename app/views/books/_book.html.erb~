@@ -1,0 +1,10 @@
+<li>
+  <span class="booktitle"><%= book.title %></span>
+  <span class="description">
+     <%= book.description %> .
+  </span><br>
+  <%= link_to "edit", book, :method => :edit %>
+  <%= link_to "delete", book, method:  :delete,
+                                     confirm: "You sure?",
+                                     title:   book.title %>
+</li>

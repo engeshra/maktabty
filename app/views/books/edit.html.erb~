@@ -1,0 +1,12 @@
+<%= form_for(@book) do |f| %>
+ <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_area :title" %>
+    <%= f.label :description %>
+    <%= f.text_area :description" %>
+    <%= f.label :state %>
+    <%= @book.state %>
+  </div>
+  <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+<% end %>

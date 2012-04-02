@@ -1,0 +1,23 @@
+<%= form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-error">
+        The form contains <%= pluralize(@book.errors.count, "error") %>.
+      </div>
+      <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li>* <%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_area :title %>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+    <%= f.label :state %>
+    <%= f.text_area :state %>
+  </div>
+  <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+<% end %>
