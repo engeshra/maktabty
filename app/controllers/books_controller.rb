@@ -23,6 +23,7 @@ class BooksController < ApplicationController
       render 'static_pages/home'
     end
   end
+  
   def edit
     @book = Book.find params[:id]
     redirect_to book_path(@book)

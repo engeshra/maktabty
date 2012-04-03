@@ -4,9 +4,6 @@
     <h3>  <%= @user.name %> , you have</h3> <h2><%= @user.books.count %> books</h2>
     <% if @user.books.any? %>
       <ol class="books">
-        <%= render @books %>
-      </ol>
-      <%= will_paginate @books %>
     <% end %>
     <h2><%= link_to 'Add new book', new_book_path %></h2>
   </div>

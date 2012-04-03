@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
+    #flash[:notice] = "in app action"+@current_user.name
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
+   
   end
 end

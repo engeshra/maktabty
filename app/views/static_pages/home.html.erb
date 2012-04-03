@@ -3,9 +3,11 @@
   <h1>Welcome to Maktabty</h1>
 
   <h2>Let's manage your Books</h2>
-
+<% if !signed_in? %>
   <%= link_to "Sign up now!", 'signup', class: "btn btn-large btn-primary" %>
+<% end %>
 </div>
+
 
 
 
