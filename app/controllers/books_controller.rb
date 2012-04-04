@@ -15,7 +15,8 @@ class BooksController < ApplicationController
   end
 
   def create
-     @book = current_user.books.build(params[:book])
+    #flash[:notice] = current_user.name
+     @book = User.find(current_user.id).books.build(params[:book])
     if @book.save
       flash[:success] = "Book Added!"
       redirect_to user_path(current_user)

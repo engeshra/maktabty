@@ -1,9 +1,9 @@
 Maktabty::Application.routes.draw do
 
   root to: 'static_pages#home'
-  resources :books
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :books
   
   match '/home', to: 'static_pages#home'
   match '/signup',  to: 'users#new'

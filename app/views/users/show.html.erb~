@@ -4,6 +4,22 @@
     <h3>  <%= @user.name %> , you have</h3> <h2><%= @user.books.count %> books</h2>
     <% if @user.books.any? %>
       <ol class="books">
+      <!--
+        render stop working so i use this type of coding
+      -->
+        <% @books.each do |b| %>
+          <li>
+        <span class="booktitle"><%= b.title %></span>
+        <span class="description">
+        <%= b.description %> 
+        </span><br>
+        <%= link_to "edit", b, :method => :get %>
+        <%= link_to "delete", b, method:  :delete,
+                                     confirm: "You sure?",
+                                     title:   b.title %>
+        </li>
+        <% end %>
+      </ol>
     <% end %>
     <h2><%= link_to 'Add new book', new_book_path %></h2>
   </div>
