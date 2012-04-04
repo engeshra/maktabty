@@ -19,7 +19,23 @@
     <%= f.label :description %>
     <%= f.text_area :description %>
     <%= f.label :state %>
-    <%= f.text_field :state %>
+  <table>
+  <tr>
+    <td></td>
+    <td><%= f.radio_button :state, "to-read" %></td>
+    <td><%= f.label :state, "to-read" %></td>
+  </td>
+  <tr>
+    <td></td>
+    <td><%= f.radio_button :state, "currently reading" %></td>
+    <td><%= f.label :state, "Currently reading" %></td>
+  </td>
+  <tr>
+    <td></td>    
+    <td><%= f.radio_button :state, "read" %></td>
+    <td><%= f.label :state, "read" %></td>
+   </tr>
+  </table></br>
   </div>
   <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
 <% end %>

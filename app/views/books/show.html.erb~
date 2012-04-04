@@ -18,12 +18,23 @@
     <%= f.label :description %>
     <%= f.text_area :description %>
     <h3>current state  : <%= @book.state %> <h3><br>
-    <%= f.radio_button :state, "to-read" %>
-    <%= f.label :state, "to-read" %>
-    <%= f.radio_button :state, "currently reading" %>
-    <%= f.label_tag(:current, "Currently reading") %>
-    <%= f.radio_button :state, "read" %>
-    <%= f.label_tag(:read, "read") %>
+  <table>
+  <tr>
+    <td></td>
+    <td><%= f.radio_button :state, "to-read" %></td>
+    <td><%= f.label :state, "to-read" %></td>
+  </td>
+  <tr>
+    <td></td>
+    <td><%= f.radio_button :state, "currently reading" %></td>
+    <td><%= f.label :state, "Currently reading" %></td>
+  </td>
+  <tr>
+    <td></td>    
+    <td><%= f.radio_button :state, "read" %></td>
+    <td><%= f.label :state, "read" %></td>
+   </tr>
+  </table></br>
   </div>
   <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
 <% end %>

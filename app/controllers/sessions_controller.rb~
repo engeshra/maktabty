@@ -17,7 +17,6 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-  flash[:notice] = "not here"
     #session[:user_id] = nil 
     reset_session
     sign_out
