@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        UserMailer.delay.registration_confirmation(@user)
+        UserMailer.registration_confirmation(@user).deliver
         sign_in @user
         format.html { redirect_to @user, notice: 'you was successfully signed up.' }
       else
