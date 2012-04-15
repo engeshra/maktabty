@@ -12,6 +12,7 @@ gem 'paperclip'
 gem "mail"
 gem 'carrierwave', :git => 'git://github.com/jnicklas/carrierwave.git'
 gem "rmagick"
+gem 'delayed_job_active_record'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

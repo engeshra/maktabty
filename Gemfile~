@@ -11,6 +11,8 @@ gem 'bootstrap-will_paginate', '0.0.5'
 gem 'paperclip'
 gem "mail"
 gem 'carrierwave', :git => 'git://github.com/jnicklas/carrierwave.git'
+gem "rmagick"
+gem 'delayed_job_active record', :git => 'git://github.com/collectiveidea/delayed_job.git'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
