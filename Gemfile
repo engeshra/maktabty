@@ -8,7 +8,10 @@ gem 'bcrypt-ruby', '3.0.1' , :require => "bcrypt"
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.5'
-
+gem 'paperclip'
+gem "mail"
+gem 'carrierwave', :git => 'git://github.com/jnicklas/carrierwave.git'
+gem "rmagick"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

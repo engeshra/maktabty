@@ -1,6 +1,6 @@
 <%= provide(:title, 'Add new Book') %>
 <h1>Add Book</h1>
-<%= form_for @book do |f| %>
+<%= form_for @book, :html => {:multipart => true} do |f| %>
   <% if @book.errors.any? %>
     <div id="error_explanation">
       <div class="alert alert-error">
@@ -35,7 +35,8 @@
     <td><%= f.radio_button :state, "read" %></td>
     <td><%= f.label :state, "read" %></td>
    </tr>
-  </table>
+  </table></br>
+  <%= f.file_field :photo %>
   </div>
   <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
 <% end %>

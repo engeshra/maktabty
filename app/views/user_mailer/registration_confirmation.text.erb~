@@ -1,0 +1,6 @@
+Hi <%= @user.name %>,
+
+Thank you for registering at Maktabty !
+
+Regards;
+Maktabty Team

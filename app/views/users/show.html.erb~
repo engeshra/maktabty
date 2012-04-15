@@ -9,9 +9,11 @@
       -->
         <% @books.each do |b| %>
           <li>
+         <span class="gravatar"><%= image_tag b.image_url.to_s %></span>
         <span class="booktitle"><%= b.title %></span>
-        <span class="description">
-        <%= b.description %> 
+        
+        <span class="state">
+        <%= b.state %> 
         </span><br>
         <%= link_to "edit", b, :method => :get %>
         <%= link_to "delete", b, method:  :delete,

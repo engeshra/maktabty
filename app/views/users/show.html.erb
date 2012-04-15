@@ -9,7 +9,9 @@
       -->
         <% @books.each do |b| %>
           <li>
+         <span class="gravatar"><%= image_tag b.image_url(:thumb).to_s %></span>
         <span class="booktitle"><%= b.title %></span>
+        
         <span class="state">
         <%= b.state %> 
         </span><br>
